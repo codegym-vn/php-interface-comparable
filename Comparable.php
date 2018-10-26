@@ -2,5 +2,5 @@
 
 interface Comparable
 {
-    public function compareTo($objOne, $objTwo);
+    public function compareTo($objTwo);
 }

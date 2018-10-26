@@ -10,14 +10,13 @@ class ComparableCircle extends Circle implements Comparable
         parent::__construct($name, $radius);
     }
 
-    public function compareTo($circleOne, $circleTwo)
+    public function compareTo($circleTwo)
     {
-        $circleOneRadius = $circleOne->getRadius();
         $circleTwoRadius = $circleTwo->getRadius();
 
-        if ($circleOneRadius > $circleTwoRadius) {
+        if ($this->getRadius() > $circleTwoRadius) {
             return 1;
-        }  else if($circleOneRadius < $circleTwoRadius) {
+        }  else if($this->getRadius() < $circleTwoRadius) {
             return -1;
         } else {
             return 0;
